@@ -7,11 +7,10 @@
     tools:context=".MainActivity"
     android:background="@color/blue_50">
 
-    <FrameLayout
-        android:id="@+id/frameLayout"
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
         android:layout_height="30dp"
-
         android:background="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/cardView" />
@@ -96,7 +95,8 @@
                         app:layout_constraintEnd_toStartOf="@+id/tv_tittle_followers"
                         app:layout_constraintHorizontal_bias="0.136"
                         app:layout_constraintStart_toEndOf="@+id/tv_tittle_repo"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="SmallSp" />
 
                     <TextView
                         android:id="@+id/tv_tittle_followers"
@@ -171,12 +171,12 @@
             </androidx.cardview.widget.CardView>
 
             <ImageView
-                android:layout_width="28dp"
-                android:layout_height="28dp"
-                android:layout_marginTop="4dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:foregroundGravity="center_horizontal"
+                android:layout_marginTop="8dp"
                 android:src="@drawable/github_logo_2"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
