@@ -10,4 +10,9 @@
 
     //Primary
     <color name="blue_50">#e3f2fd</color>
+    <color name="blue_100">#bbdefb</color>
+    <color name="grey_100">#afc2cb</color>
+    //Secondary
+    <color name="light_blue_A100">#40c4ff</color>
+    <color name="light_blue_A100_light">#82f7ff</color>
 </resources>

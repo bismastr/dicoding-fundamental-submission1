@@ -4,6 +4,7 @@ import android.content.Intent
 import android.content.res.TypedArray
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.github_dummy.databinding.ActivityMainBinding
 
@@ -32,6 +33,8 @@ class MainActivity : AppCompatActivity() {
         userAdapter.submitList(users)
 
     }
+
+
     //init Recyclerview
     private fun initRecylerview() {
         binding.recyclerView.layoutManager = LinearLayoutManager(this)

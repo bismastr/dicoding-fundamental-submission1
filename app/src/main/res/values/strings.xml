@@ -1,11 +1,18 @@
 <resources>
     <string name="app_name">My App</string>
     <!-- Other string resources-->
+    <string name="at">\u0040</string>
     <string name="lorem_ipsum">Lorem Ipsum</string>
     <string name="follower">Follower</string>
-    <string name="following">Following</string>
-    <string name="repository">Repository</string>
     <string name="_80">80</string>
+    <string name="bisma_satria">Bisma Satria</string>
+    <string name="bismastr">\@bismastr</string>
+    <string name="following">Following</string>
+    <string name="followers">Followers</string>
+    <string name="repository">Repository</string>
+    <string name="_27">27</string>
+    <string name="_1341">1341</string>
+    <string name="_278">278</string>
     <string-array name="username">
         <item>JakeWharton</item>
         <item>amitshekhariitbhu</item>
