@@ -1,5 +1,6 @@
 package com.example.github_dummy
 
+import android.content.Intent
 import android.content.res.TypedArray
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -36,6 +37,14 @@ class MainActivity : AppCompatActivity() {
         binding.recyclerView.layoutManager = LinearLayoutManager(this)
         userAdapter = UserRecyclerViewAdapter()
         binding.recyclerView.adapter = userAdapter
+        userAdapter.setOnItemClickCallback(object : UserRecyclerViewAdapter.OnItemClickCallback {
+            override fun onItemClicked(data: User) {
+                val moveDetails = Intent(this@MainActivity, Details::class.java)
+                moveDetails.putExtra(Details.EXTRA_USER, data)
+                startActivity(moveDetails)
+            }
+        })
+
     }
     //prepare data
     private fun prepare() {

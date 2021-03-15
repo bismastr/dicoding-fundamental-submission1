@@ -1,5 +1,9 @@
 package com.example.github_dummy
 
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
+
+@Parcelize
 data class User(
     var avatar: Int,
     var username: String,
@@ -9,4 +13,4 @@ data class User(
     var follower: String,
     var following: String,
     var repo: String,
-        )
+        ) : Parcelable

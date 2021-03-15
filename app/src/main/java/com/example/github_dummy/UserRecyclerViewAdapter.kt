@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 class UserRecyclerViewAdapter: RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     private var items = arrayListOf<User>()
+    private lateinit var onItemClickCallback: OnItemClickCallback
 
     inner class UserViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         private var tvName: TextView = itemView.findViewById(R.id.tv_name)
@@ -32,12 +33,22 @@ class UserRecyclerViewAdapter: RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         when(holder){
             is UserViewHolder -> {
+                //Set On Click Listener
+                holder.itemView.setOnClickListener{onItemClickCallback.onItemClicked(items[holder.adapterPosition])}
                 holder.bind(items[position])
             }
         }
     }
+
     fun submitList(userList: ArrayList<User>){
         items = userList
+    }
+    //Click Listener
+    fun setOnItemClickCallback(onItemClickCallback: OnItemClickCallback) {
+        this.onItemClickCallback = onItemClickCallback
+    }
+    interface OnItemClickCallback {
+        fun onItemClicked(data: User)
     }
 
     override fun getItemCount(): Int {
