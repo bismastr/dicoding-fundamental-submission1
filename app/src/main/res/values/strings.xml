@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My App</string>
+    <string name="app_name">Github Clone</string>
     <!-- Other string resources-->
     <string name="at">\u0040</string>
     <string name="lorem_ipsum">Lorem Ipsum</string>

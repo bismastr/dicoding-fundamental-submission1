@@ -30,7 +30,6 @@ class MainActivity : AppCompatActivity() {
         initRecylerview()
         //submit data to adapter
         userAdapter.submitList(users)
-
     }
 
     //init Recyclerview
